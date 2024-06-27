@@ -1,0 +1,366 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFF0;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.table {
+  display: table;
+  /* width: 100px; */
+}
+.columnm{
+  display: table-column;    
+}
+.row {
+  display: table-row; 
+  position: relative;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-container {
+  overflow: hidden;
+  /* margin: 20px; */
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.gallery {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.arrow-buttons {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.arrow-buttons.left {
+  left: 0;
+}
+
+.arrow-buttons.right {
+  right: 0;
+}
+
+.gallery-container:hover .arrow-buttons {
+  display: flex;
+  align-items: center; /* Align arrow buttons with the gallery */
+}
+
+.arrow-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.arrow-buttons:hover .arrow-button {
+  color: #555;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  /* border-bottom: #000 solid 1px; */
+  /* background-color: #eee; */
+  color: white;
+}
+
+.logo img {
+  padding-left: 10px;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+.navigation a.active {
+  /* Add styling for the active link here */
+  font-weight: bold;
+  /* Example: background-color: #333; color: #fff; */
+}
+
+body:before{
+  content: "";
+  position: absolute;
+  inset: 40% -60% 0 -60%;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav.before .active-element {
+  transform: rotateY(180deg);
+}
+
+.photo {
+  position: relative;
+}
+
+.photo a {
+  text-decoration: none !important; /* Remove underline for links within the .photo element */
+}
+
+.photo a:hover {
+  text-decoration: underline;
+}
+
+.photo-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.price {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 5px;
+  color: black;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #333;
+}
+
+/* Cards */
+.card {
+  position: relative;
+  width: 300px;
+  height: 140px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  ;
+}
+
+.bg-y {
+  position: absolute;
+  /* padding: 10px; */
+  top: 5px;
+  left: 5px;
+  width: 290px;
+  height: 130px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.bg {
+  position: absolute;
+  /* padding: 10px; */
+  top: 5px;
+  left: 5px;
+  width: 290px;
+  height: 130px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.blob-y {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: hsl(63, 100%, 60%);
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+.blob-g {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: hsl(129, 100%, 60%);
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 350px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background-color: #FFF380;
+  color: #00000F;
+  display: flex;
+  align-items: center;
+  border: 10px solid #FFF380;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  background-color: #FFFFF0;
+  color: #00000F;
+  display: flex;
+  align-items: center;
+  border: 10px solid #FFFFF0;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
