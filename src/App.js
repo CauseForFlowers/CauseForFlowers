@@ -7,11 +7,12 @@ import Navigation from './components/Navigation';
 import ContactUs from './components/ContactUs';
 
 const photos = [
-  { src: 'photos/flowers1.png',  alt: 'Photo 1', price: 'Design 1 - $199.99', caption: 'Description...' },
-  { src: 'photos/flowers2.png',  alt: 'Photo 2', price: 'Design 2 - $199.99', caption: 'Description...' },
-  { src: 'photos/flowers3.png',  alt: 'Photo 3', price: 'Design 3 - $199.99', caption: 'Description...' },
-  { src: 'photos/flowers4.png',  alt: 'Photo 4', price: 'Design 4 - $199.99', caption: 'Description...' },
-  { src: 'photos/flowers5.png',  alt: 'Photo 5', price: 'Design 5 - $199.99', caption: 'Description...' },
+  { src: 'photos/Assortment1.png',  alt: 'Photo 1', price: 'Design 1 - $199.99', caption: 'Description...' },
+  { src: 'photos/Assortment2.png',  alt: 'Photo 2', price: 'Design 2 - $199.99', caption: 'Description...' },
+  { src: 'photos/Assortment3.png',  alt: 'Photo 3', price: 'Design 3 - $199.99', caption: 'Description...' },
+  { src: 'photos/Assortment4.png',  alt: 'Photo 4', price: 'Design 4 - $199.99', caption: 'Description...' },
+  { src: 'photos/Assortment5.png',  alt: 'Photo 5', price: 'Design 5 - $199.99', caption: 'Description...' },
+  { src: 'photos/Assortment6.png',  alt: 'Photo 6', price: 'Design 6 - $199.99', caption: 'Description...' },
   // { src: 'photos/flowers5.png',       alt: 'Photo 6', price: 'Design 6 - $199.99', caption: 'Description...' },
   // { src: 'logo192.png',       alt: 'Photo 7', price: 'Design 7 - $199.99', caption: 'Description...' },
   // Add more photos as needed
